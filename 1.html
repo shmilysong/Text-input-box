@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+
+<style>
+*{padding:0; margin:0;}
+</style>
+<script src="kindeditor/kindeditor-min.js"></script>
+<script>
+KindEditor.options.filterMode = false;
+	KindEditor.ready(function (K) {
+		window.editor = K.create('#myEditor1,#myEditor2,#myEditor3', {
+			uploadJson: 'kindeditor/asp.net/upload_json.ashx',
+			fileManagerJson: 'kindeditor/asp.net/file_manager_json.ashx',
+			allowFileManager: false,
+			minWidth:'300px',
+			minHeight:'90px',
+			items: ['source', 'image', '|', 'link', 'unlink', ]
+		});
+	});
+</script>
+
+</head>
+
+<body>
+<div class="controls">
+	<textarea id="myEditor1" name="myEditor1" runat="server" style="width: 380px; height: 110px;">
+    </textarea>
+</div>
+</body>
+</html>
